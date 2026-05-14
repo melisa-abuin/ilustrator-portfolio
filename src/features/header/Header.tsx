@@ -19,9 +19,6 @@ export const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <h1 className={styles.title}>Portfolio</h1>
-        </div>
         <nav className={styles.nav} aria-label="Main navigation">
           <NavLink
             className={({ isActive }) =>

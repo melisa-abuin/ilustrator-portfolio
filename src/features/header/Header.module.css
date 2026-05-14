@@ -1,5 +1,5 @@
 .header {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgb(30, 53, 38);
   padding: 1rem 2rem;
   position: sticky;
   top: 0;
@@ -15,11 +15,6 @@
   align-items: center;
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -27,35 +22,28 @@
 }
 
 .navLink {
-  color: #333;
+  color: rgba(255, 255, 255);
   text-decoration: none;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
+  text-transform: uppercase;
   transition: color 0.2s ease;
 }
 
 .navLink:hover {
-  color: #777;
+  color: rgba(255, 255, 255);
 }
 
 .navLinkActive {
-  color: #111;
+  color: rgba(255, 255, 255);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
 
-.title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin: 0;
-  color: #333;
-  letter-spacing: -0.5px;
-}
-
 .languageButton {
-  background-color: #333;
-  color: white;
-  border: none;
+  background-color: transparent;
+  color: rgba(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255);
   padding: 0.5rem 1rem;
   border-radius: 4px;
   font-size: 0.875rem;
@@ -65,7 +53,7 @@
 }
 
 .languageButton:hover {
-  background-color: #555;
+  background-color: rgba(255, 255, 255, 0.1);
   transform: scale(1.05);
 }
 
@@ -93,10 +81,6 @@
 
   .navLink {
     font-size: 0.875rem;
-  }
-
-  .title {
-    font-size: 1.25rem;
   }
 
   .languageButton {
