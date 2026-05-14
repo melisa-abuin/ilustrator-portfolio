@@ -1,6 +1,9 @@
 {
   "header.title": "Portfolio Illustrator",
   "header.language": "EN",
+  "header.home": "Home",
+  "header.cases": "Progetti",
+  "header.aboutMe": "Chi Sono",
   "footer.copyright": "© 2026 Portfolio Illustrator. Tutti i diritti riservati.",
   "footer.about": "Chi Siamo",
   "footer.contact": "Contatti",

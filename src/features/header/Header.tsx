@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 export const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
 
   const handleLanguageToggle = (): void => {
     const newLang = toggleLanguage(i18n.language);
@@ -21,6 +21,17 @@ export const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
         <div className={styles.logo}>
           <h1 className={styles.title}>Portfolio</h1>
         </div>
+        <nav className={styles.nav} aria-label="Main navigation">
+          <a className={styles.navLink} href="#home">
+            {t("header.home")}
+          </a>
+          <a className={styles.navLink} href="#cases">
+            {t("header.cases")}
+          </a>
+          <a className={styles.navLink} href="#about">
+            {t("header.aboutMe")}
+          </a>
+        </nav>
         <button
           className={styles.languageButton}
           onClick={handleLanguageToggle}

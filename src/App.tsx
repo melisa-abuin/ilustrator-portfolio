@@ -1,71 +1,56 @@
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
-import type { PortfolioData } from "./utils/types";
-import { fetchPortfolioData } from "./utils/api";
-import { Header } from "./features/header/Header";
-import { Hero } from "./features/portfolio/Hero";
-import { Footer } from "./features/footer/Footer";
-import styles from "./App.module.css";
+import { useEffect, useState } from "react"
+import { Header } from "./features/header/Header"
+import { HomePage } from "./features/pages/HomePage"
+import { CasesPage } from "./features/pages/CasesPage"
+import { AboutMePage } from "./features/pages/AboutMePage"
+import styles from "./App.module.css"
 
-export const App: React.FC = () => {
-  const { t } = useTranslation();
-  const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(
-    null,
-  );
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+type Page = "home" | "cases" | "about"
 
-  useEffect(() => {
-    const loadData = async (): Promise<void> => {
-      try {
-        setIsLoading(true);
-        const data = await fetchPortfolioData();
-        setPortfolioData(data);
-        setError(null);
-      } catch (err) {
-        setError(
-          err instanceof Error ? err.message : "Failed to load portfolio data",
-        );
-        console.error("Failed to load portfolio data:", err);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-
-    loadData();
-  }, []);
-
-  if (isLoading) {
-    return (
-      <div className={styles.loadingContainer}>
-        <Header />
-        <div className={styles.loader}>Loading...</div>
-      </div>
-    );
+const getPageFromHash = (hash: string): Page => {
+  if (hash === "#cases") {
+    return "cases"
   }
 
-  if (error || !portfolioData) {
-    return (
-      <div className={styles.errorContainer}>
-        <Header />
-        <div className={styles.error}>
-          {error || "Failed to load portfolio data"}
-        </div>
-      </div>
-    );
+  if (hash === "#about") {
+    return "about"
+  }
+
+  return "home"
+}
+
+export const App: React.FC = () => {
+  const [page, setPage] = useState<Page>(() =>
+    getPageFromHash(window.location.hash),
+  )
+
+  useEffect(() => {
+    const handleHashChange = (): void => {
+      setPage(getPageFromHash(window.location.hash))
+    }
+
+    window.addEventListener("hashchange", handleHashChange)
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange)
+    }
+  }, [])
+
+  const renderPage = (): React.ReactElement => {
+    switch (page) {
+      case "cases":
+        return <CasesPage />
+      case "about":
+        return <AboutMePage />
+      default:
+        return <HomePage />
+    }
   }
 
   return (
     <div className={styles.app}>
       <Header />
-      <main className={styles.main}>
-        <Hero
-          bannerImage={portfolioData.hero.bannerImage}
-          title={t("portfolio.title")}
-          subtitle={t("portfolio.subtitle")}
-        />
-      </main>
-      <Footer links={portfolioData.footer.links} />
+      <main className={styles.main}>{renderPage()}</main>
     </div>
-  );
-};
+  )
+}
