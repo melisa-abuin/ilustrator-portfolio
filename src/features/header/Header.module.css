@@ -38,6 +38,12 @@
   color: #777;
 }
 
+.navLinkActive {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
 .title {
   font-size: 1.5rem;
   font-weight: 700;
