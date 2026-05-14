@@ -1,29 +1,29 @@
 /**
- * Type definitions for CMS data structures
- * Prepare for future CMS integration
+ * Type definitions for portfolio data structures
+ * Prepare for future data source integration
  */
 
-export interface CMSImage {
+export interface Image {
   url: string;
   alt: string;
   title?: string;
 }
 
-export interface CMSPortfolioItem {
+export interface PortfolioItem {
   id: string;
   title: string;
   description: string;
-  image: CMSImage;
+  image: Image;
   category?: string;
 }
 
-export interface CMSPortfolioData {
+export interface PortfolioData {
   hero: {
-    bannerImage: CMSImage;
+    bannerImage: Image;
     title: string;
     subtitle: string;
   };
-  items: CMSPortfolioItem[];
+  items: PortfolioItem[];
   footer: {
     copyright: string;
     links: Array<{

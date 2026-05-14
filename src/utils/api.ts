@@ -1,10 +1,10 @@
-import type { CMSPortfolioData } from "./types";
+import type { PortfolioData } from "./types";
 
 /**
- * Mock portfolio data - Replace with actual CMS API call
- * This demonstrates the structure that will come from CMS
+ * Mock portfolio data - Replace with actual API call
+ * This demonstrates the structure that will come from your data source
  */
-export const getMockPortfolioData = (): CMSPortfolioData => {
+export const getMockPortfolioData = (): PortfolioData => {
   return {
     hero: {
       bannerImage: {
@@ -50,11 +50,11 @@ export const getMockPortfolioData = (): CMSPortfolioData => {
 };
 
 /**
- * Future API function template for CMS integration
- * Replace this with actual API call to your CMS
+ * Future API function template for data source integration
+ * Replace this with actual API call to your backend
  */
-export const fetchPortfolioDataFromCMS =
-  async (): Promise<CMSPortfolioData> => {
+export const fetchPortfolioData =
+  async (): Promise<PortfolioData> => {
     // const response = await fetch('/api/portfolio');
     // return response.json();
     return getMockPortfolioData();
@@ -62,7 +62,7 @@ export const fetchPortfolioDataFromCMS =
 
 /**
  * Get a placeholder image URL
- * Useful for development before CMS images are ready
+ * Useful for development before final images are ready
  */
 export const getPlaceholderImage = (width: number, height: number): string => {
   return `https://via.placeholder.com/${width}x${height}?text=Portfolio+Image`;

@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next";
-import type { CMSImage } from "../../utils/types";
+import type { Image } from "../../utils/types";
 import styles from "./Hero.module.css";
 
 interface HeroProps {
-  bannerImage: CMSImage;
+  bannerImage: Image;
   title: string;
   subtitle: string;
 }

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import type { CMSPortfolioData } from "./utils/types";
-import { fetchPortfolioDataFromCMS } from "./utils/api";
+import type { PortfolioData } from "./utils/types";
+import { fetchPortfolioData } from "./utils/api";
 import { Header } from "./features/header/Header";
 import { Hero } from "./features/portfolio/Hero";
 import { Footer } from "./features/footer/Footer";
@@ -9,7 +9,7 @@ import styles from "./App.module.css";
 
 export const App: React.FC = () => {
   const { t } = useTranslation();
-  const [portfolioData, setPortfolioData] = useState<CMSPortfolioData | null>(
+  const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(
     null,
   );
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +19,7 @@ export const App: React.FC = () => {
     const loadData = async (): Promise<void> => {
       try {
         setIsLoading(true);
-        const data = await fetchPortfolioDataFromCMS();
+        const data = await fetchPortfolioData();
         setPortfolioData(data);
         setError(null);
       } catch (err) {
