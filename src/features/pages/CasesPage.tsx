@@ -1,3 +1,3 @@
-export const CasesPage: React.FC = () => {
-  return <div />;
-};
+export const CasesPage = () => {
+  return <div />
+}

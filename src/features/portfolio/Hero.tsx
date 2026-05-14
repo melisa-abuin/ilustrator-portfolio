@@ -1,15 +1,15 @@
-import { useTranslation } from "react-i18next";
-import type { Image } from "../../utils/types";
-import styles from "./Hero.module.css";
+import { useTranslation } from "react-i18next"
+import type { Image } from "../../utils/types"
+import styles from "./Hero.module.css"
 
 interface HeroProps {
-  bannerImage: Image;
-  title: string;
-  subtitle: string;
+  bannerImage: Image
+  title: string
+  subtitle: string
 }
 
-export const Hero: React.FC<HeroProps> = ({ bannerImage, title, subtitle }) => {
-  const { t } = useTranslation();
+export const Hero = ({ bannerImage, title, subtitle }: HeroProps) => {
+  const { t } = useTranslation()
 
   return (
     <section className={styles.hero}>
@@ -29,5 +29,5 @@ export const Hero: React.FC<HeroProps> = ({ bannerImage, title, subtitle }) => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}

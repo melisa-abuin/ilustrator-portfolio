@@ -1,3 +1,3 @@
-export const AboutMePage: React.FC = () => {
-  return <div />;
-};
+export const AboutMePage = () => {
+  return <div />
+}

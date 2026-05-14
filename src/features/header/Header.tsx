@@ -7,7 +7,7 @@ interface HeaderProps {
   onLanguageChange?: (lang: string) => void
 }
 
-export const Header: React.FC<HeaderProps> = ({ onLanguageChange }) => {
+export const Header = ({ onLanguageChange }: HeaderProps) => {
   const { i18n, t } = useTranslation()
 
   const handleLanguageToggle = (): void => {
