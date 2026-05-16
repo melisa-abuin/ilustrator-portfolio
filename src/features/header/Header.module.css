@@ -44,22 +44,38 @@
 .languageButton {
   background-color: transparent;
   color: rgba(255, 255, 255);
-  border: 1px solid rgba(255, 255, 255);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  font-size: 0.875rem;
-  font-weight: 600;
+  border: none;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease;
+}
+
+.languageSwitcher {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.languageButtonActive {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 
 .languageButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: scale(1.05);
+  color: rgba(255, 255, 255);
+}
+
+.languageDivider {
+  color: rgba(255, 255, 255);
+  font-size: 0.95rem;
+  font-weight: 400;
 }
 
 .languageButton:active {
-  transform: scale(0.95);
+  opacity: 0.85;
 }
 
 @media (max-width: 768px) {
@@ -85,7 +101,14 @@
   }
 
   .languageButton {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .languageSwitcher {
+    gap: 0.4rem;
+  }
+
+  .languageDivider {
+    font-size: 0.875rem;
   }
 }

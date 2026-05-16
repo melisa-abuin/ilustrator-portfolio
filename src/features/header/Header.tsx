@@ -1,6 +1,5 @@
 import { useTranslation } from "react-i18next"
 import { NavLink } from "react-router-dom"
-import { toggleLanguage } from "../../utils/language"
 import styles from "./Header.module.css"
 
 interface HeaderProps {
@@ -10,10 +9,11 @@ interface HeaderProps {
 export const Header = ({ onLanguageChange }: HeaderProps) => {
   const { i18n, t } = useTranslation()
 
-  const handleLanguageToggle = (): void => {
-    const newLang = toggleLanguage(i18n.language)
-    i18n.changeLanguage(newLang)
-    onLanguageChange?.(newLang)
+  const activeLanguage = i18n.resolvedLanguage ?? i18n.language
+
+  const handleLanguageChange = (language: "it" | "en"): void => {
+    i18n.changeLanguage(language)
+    onLanguageChange?.(language)
   }
 
   return (
@@ -52,13 +52,33 @@ export const Header = ({ onLanguageChange }: HeaderProps) => {
             {t("header.aboutMe")}
           </NavLink>
         </nav>
-        <button
-          className={styles.languageButton}
-          onClick={handleLanguageToggle}
-          aria-label="Toggle language"
+        <div
+          className={styles.languageSwitcher}
+          role="group"
+          aria-label="Select language"
         >
-          {i18n.language === "en" ? "IT" : "EN"}
-        </button>
+          <button
+            className={`${styles.languageButton} ${activeLanguage.startsWith("it") ? styles.languageButtonActive : ""}`}
+            onClick={() => handleLanguageChange("it")}
+            aria-label="Switch to Italian"
+            aria-pressed={activeLanguage.startsWith("it")}
+            type="button"
+          >
+            IT
+          </button>
+          <span className={styles.languageDivider} aria-hidden="true">
+            |
+          </span>
+          <button
+            className={`${styles.languageButton} ${activeLanguage.startsWith("en") ? styles.languageButtonActive : ""}`}
+            onClick={() => handleLanguageChange("en")}
+            aria-label="Switch to English"
+            aria-pressed={activeLanguage.startsWith("en")}
+            type="button"
+          >
+            EN
+          </button>
+        </div>
       </div>
     </header>
   )
