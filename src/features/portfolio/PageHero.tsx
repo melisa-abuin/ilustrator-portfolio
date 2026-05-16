@@ -21,11 +21,15 @@ export const PageHero = ({
           <p className={styles.subtitle}>{subtitle}</p>
         </div>
       </div>
-      <div className={styles.imageSide}>
-        <div className={styles.container}>
-          <div className={styles.imageWrapper}>
-            <img src={imageSrc} alt={imageAlt} />
-          </div>
+      <div className={styles.container}>
+        <div className={styles.decorSquares} aria-hidden="true">
+          <span className={`${styles.square} ${styles.squareTopLeft}`} />
+          <span className={`${styles.square} ${styles.squareTopRight}`} />
+          <span className={`${styles.square} ${styles.squareBottomLeft}`} />
+          <span className={`${styles.square} ${styles.squareBottomRight}`} />
+        </div>
+        <div className={styles.imageWrapper}>
+          <img src={imageSrc} alt={imageAlt} />
         </div>
       </div>
     </section>

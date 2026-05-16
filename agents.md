@@ -15,3 +15,8 @@
 
 - Define global variables in a shared global stylesheet (for example, `src/index.css` under `:root`).
 - Consume those variables with `var(--token-name)` in all module and page styles.
+
+## Architecture
+
+- This repository follows a feature-based architecture.
+- When adding new components, place them under the relevant feature folder in `src/features/` rather than in generic shared-by-default locations.
