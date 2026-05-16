@@ -1,0 +1,125 @@
+.pageHero {
+  display: flex;
+  min-height: 480px;
+}
+
+.textSide {
+  flex: 1;
+  background-color: var(--color-surface-base);
+  display: flex;
+  align-items: center;
+  padding: 3rem 3rem 3rem max(2rem, calc((100vw - 1200px) / 2));
+}
+
+.title {
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.subtitle {
+  color: var(--color-primary);
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.5;
+  margin: 1rem 0 0;
+  max-width: 34ch;
+}
+
+.imageSide {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface-base);
+}
+
+.container {
+  --frame-width: 520px;
+  --frame-height: 630px;
+  --shape-side-padding: 34px;
+  position: relative;
+  width: 700px;
+  height: 700px;
+  background: var(--color-surface-muted);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container::before,
+.container::after {
+  content: "";
+  position: absolute;
+  background: var(--color-secondary);
+  z-index: 0;
+  width: calc(var(--frame-width) + (var(--shape-side-padding) * 2));
+  left: 50%;
+  transform: translateX(-50%);
+  height: calc(var(--frame-height) / 2);
+}
+
+.container::before {
+  top: calc(50% - var(--frame-height) / 2);
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.container::after {
+  top: 50%;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.imageWrapper {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background: var(--color-surface-soft);
+  z-index: 1;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .pageHero {
+    flex-direction: column;
+  }
+
+  .textSide {
+    padding: 2rem;
+    min-height: 240px;
+  }
+
+  .imageSide {
+    min-height: 240px;
+  }
+
+  .container {
+    width: min(100%, 700px);
+    height: min(100vw, 700px);
+    --frame-width: min(74vw, 520px);
+    --frame-height: min(90vw, 630px);
+    --shape-side-padding: 20px;
+  }
+
+  .container::before,
+  .container::after {
+    width: calc(var(--frame-width) + (var(--shape-side-padding) * 2));
+    height: calc(var(--frame-height) / 2);
+  }
+
+  .imageWrapper {
+    width: var(--frame-width);
+    height: var(--frame-height);
+  }
+}
