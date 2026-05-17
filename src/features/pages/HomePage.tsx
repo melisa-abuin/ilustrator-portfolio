@@ -1,4 +1,6 @@
 import { PageHero } from "../portfolio/PageHero"
+import { AboutSectionContent } from "../portfolio/AboutSectionContent"
+import { SplitTextSection } from "../portfolio/SplitTextSection"
 import { OverlayImageGallery } from "../portfolio/OverlayImageGallery"
 import { useTranslation } from "react-i18next"
 
@@ -36,6 +38,12 @@ export const HomePage = () => {
         imageSrc="https://picsum.photos/id/1025/900/1100"
         imageAlt="Portfolio hero image"
       />
+      <SplitTextSection
+        sectionName={t("aboutSection.name")}
+        title={t("aboutSection.title")}
+      >
+        <AboutSectionContent />
+      </SplitTextSection>
       <OverlayImageGallery items={galleryItems} />
     </>
   )

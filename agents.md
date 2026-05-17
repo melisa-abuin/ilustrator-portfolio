@@ -20,3 +20,9 @@
 
 - This repository follows a feature-based architecture.
 - When adding new components, place them under the relevant feature folder in `src/features/` rather than in generic shared-by-default locations.
+
+## Copy And Translations
+
+- Do not hardcode user-facing text in components or pages when an `i18n` locale file is available.
+- Add new user-facing strings to both `src/i18n/locales/en.json` and `src/i18n/locales/it.json`.
+- Consume translated text through `t(...)` instead of inline literals for section labels, titles, buttons, and other visible copy.

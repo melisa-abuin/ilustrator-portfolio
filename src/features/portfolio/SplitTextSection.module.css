@@ -1,0 +1,53 @@
+.section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.content {
+  width: min(1200px, 92vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(160px, 220px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.sectionName {
+  font-family: "Jost", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-primary);
+}
+
+.body {
+  display: grid;
+  gap: 1rem;
+}
+
+.title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 600;
+  line-height: 0.95;
+  color: var(--color-text-base);
+}
+
+.children {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 62ch;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+}
