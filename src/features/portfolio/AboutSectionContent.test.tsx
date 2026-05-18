@@ -17,4 +17,21 @@ describe("AboutSectionContent", () => {
     expect(screen.getByText("for events and festivals")).toBeInTheDocument()
     expect(screen.getByText("for brands and campaigns")).toBeInTheDocument()
   })
+
+  it("renders custom translation keys", () => {
+    renderWithRouter(
+      <AboutSectionContent
+        bodyKey="home.extraSection1.body"
+        pointKeys={["gallery.item1", "gallery.item2"]}
+      />,
+    )
+
+    expect(
+      screen.getByText(
+        "Each project starts from the story, then evolves through composition, rhythm, and expressive color choices.",
+      ),
+    ).toBeInTheDocument()
+    expect(screen.getByText("Editorial")).toBeInTheDocument()
+    expect(screen.getByText("Festival events")).toBeInTheDocument()
+  })
 })

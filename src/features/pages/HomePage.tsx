@@ -45,6 +45,26 @@ export const HomePage = () => {
         <AboutSectionContent />
       </SplitTextSection>
       <OverlayImageGallery items={galleryItems} />
+      <SplitTextSection
+        sectionName={t("home.extraSection1.name")}
+        title={t("home.extraSection1.title")}
+      >
+        <p>{t("home.extraSection1.body")}</p>
+      </SplitTextSection>
+      <SplitTextSection
+        sectionName={t("home.extraSection2.name")}
+        title={t("home.extraSection2.title")}
+      >
+        <AboutSectionContent
+          bodyKey="home.extraSection2.body"
+          pointKeys={[
+            "home.extraSection2.point1",
+            "home.extraSection2.point2",
+            "home.extraSection2.point3",
+            "home.extraSection2.point4",
+          ]}
+        />
+      </SplitTextSection>
     </>
   )
 }
