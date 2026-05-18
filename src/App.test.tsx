@@ -20,7 +20,7 @@ describe("App", () => {
       screen.getByRole("heading", { name: "Illustrations Portfolio" }),
     ).toBeInTheDocument()
     expect(
-      screen.getByText("© 2026 Illustrator Portfolio. All rights reserved."),
+      screen.getByText("©2026 Illustrator Portfolio. | Anastasia Bakastikova"),
     ).toBeInTheDocument()
   })
 })

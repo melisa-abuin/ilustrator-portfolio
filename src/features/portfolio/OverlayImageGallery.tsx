@@ -2,7 +2,8 @@ import { OverlayImageCard } from "./OverlayImageCard"
 import styles from "./OverlayImageGallery.module.css"
 
 interface OverlayImageGalleryItem {
-  imageSrc: string
+  imageSrc?: string
+  publicId?: string
   imageAlt: string
   text: string
 }
@@ -18,7 +19,8 @@ export const OverlayImageGallery = ({ items }: OverlayImageGalleryProps) => {
     <section className={styles.gallery} aria-label="Featured artwork gallery">
       {visibleItems.map((item, index) => (
         <OverlayImageCard
-          key={`${item.imageSrc}-${index}`}
+          key={`${item.publicId ?? item.imageSrc}-${index}`}
+          publicId={item.publicId}
           imageSrc={item.imageSrc}
           imageAlt={item.imageAlt}
           text={item.text}

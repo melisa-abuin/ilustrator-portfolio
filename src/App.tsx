@@ -5,6 +5,7 @@ import { CasesPage } from "./features/pages/CasesPage"
 import { AboutMePage } from "./features/pages/AboutMePage"
 import { Footer } from "./features/footer/Footer"
 import styles from "./App.module.css"
+import "./utils/cloudinary"
 
 export const App = () => {
   return (

@@ -1,9 +1,11 @@
+import { CloudinaryImage } from "./CloudinaryImage"
 import styles from "./PageHero.module.css"
 
 interface PageHeroProps {
   title: string
   subtitle: string
-  imageSrc: string
+  imageSrc?: string
+  cloudinaryPublicId?: string
   imageAlt?: string
 }
 
@@ -11,6 +13,7 @@ export const PageHero = ({
   title,
   subtitle,
   imageSrc,
+  cloudinaryPublicId,
   imageAlt = "",
 }: PageHeroProps) => {
   return (
@@ -33,7 +36,13 @@ export const PageHero = ({
               />
             </div>
             <div className={styles.imageWrapper}>
-              <img src={imageSrc} alt={imageAlt} />
+              <CloudinaryImage
+                publicId={cloudinaryPublicId}
+                imageSrc={imageSrc}
+                alt={imageAlt}
+                width={600}
+                height={600}
+              />
             </div>
           </div>
         </div>

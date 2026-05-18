@@ -1,19 +1,27 @@
+import { CloudinaryImage } from "./CloudinaryImage"
 import styles from "./OverlayImageCard.module.css"
 
 interface OverlayImageCardProps {
-  imageSrc: string
+  imageSrc?: string
+  publicId?: string
   imageAlt: string
   text: string
 }
 
 export const OverlayImageCard = ({
   imageSrc,
+  publicId,
   imageAlt,
   text,
 }: OverlayImageCardProps) => {
   return (
     <article className={styles.card}>
-      <img className={styles.image} src={imageSrc} alt={imageAlt} />
+      <CloudinaryImage
+        className={styles.image}
+        publicId={publicId}
+        imageSrc={imageSrc}
+        alt={imageAlt}
+      />
       <div className={styles.overlayText}>{text}</div>
     </article>
   )

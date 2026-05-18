@@ -9,22 +9,22 @@ export const HomePage = () => {
 
   const galleryItems = [
     {
-      imageSrc: "https://picsum.photos/id/1011/800/1000",
+      publicId: "editorial_crdbvi",
       imageAlt: "Editorial illustration with botanical details",
       text: t("gallery.item1"),
     },
     {
-      imageSrc: "https://picsum.photos/id/1025/800/1000",
+      publicId: "marca_zxpz35",
       imageAlt: "Portrait concept artwork",
       text: t("gallery.item2"),
     },
     {
-      imageSrc: "https://picsum.photos/id/1005/800/1000",
+      publicId: "stampe_obifx1",
       imageAlt: "Colorful mixed media composition",
       text: t("gallery.item3"),
     },
     {
-      imageSrc: "https://picsum.photos/id/1041/800/1000",
+      publicId: "eventi_c4jsl3",
       imageAlt: "Storytelling scene illustration",
       text: t("gallery.item4"),
     },
@@ -35,7 +35,7 @@ export const HomePage = () => {
       <PageHero
         title={t("portfolio.title")}
         subtitle={t("portfolio.subtitle")}
-        imageSrc="https://picsum.photos/id/1025/900/1100"
+        cloudinaryPublicId="banner_b1lh0r"
         imageAlt="Portfolio hero image"
       />
       <SplitTextSection
