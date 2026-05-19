@@ -112,6 +112,7 @@
   background-color: var(--color-surface-muted);
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   padding: 3rem;
   font-family: "Cormorant Garamond", serif;
   flex-direction: column;
