@@ -20,10 +20,8 @@ export const PageHero = ({
     <section className={styles.pageHero}>
       <div className={styles.contentRow}>
         <div className={styles.textSide}>
-          <div>
-            <h1 className={styles.title}>{title}</h1>
-            <p className={styles.subtitle}>{subtitle}</p>
-          </div>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.subtitle}>{subtitle}</p>
         </div>
         <div className={styles.imageSide}>
           <div className={styles.container}>

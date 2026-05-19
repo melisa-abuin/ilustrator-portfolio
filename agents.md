@@ -16,6 +16,11 @@
 - Define global variables in a shared global stylesheet (for example, `src/index.css` under `:root`).
 - Consume those variables with `var(--token-name)` in all module and page styles.
 
+## CSS Class Ordering
+
+- Always write new CSS class selectors in alphabetical order within each stylesheet block (including inside media queries).
+- When editing an existing file, keep the selector order alphabetical after adding new classes.
+
 ## Architecture
 
 - This repository follows a feature-based architecture.

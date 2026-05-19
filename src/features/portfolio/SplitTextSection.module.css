@@ -1,6 +1,13 @@
-.section {
-  width: 100%;
-  padding: 4rem 0;
+.body {
+  display: grid;
+  gap: 1rem;
+}
+
+.children {
+  font-family: "Jost", sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 62ch;
 }
 
 .content {
@@ -12,6 +19,11 @@
   align-items: start;
 }
 
+.section {
+  width: 100%;
+  padding: 4rem 0;
+}
+
 .sectionName {
   font-family: "Jost", sans-serif;
   font-size: 0.875rem;
@@ -21,24 +33,12 @@
   color: var(--color-primary);
 }
 
-.body {
-  display: grid;
-  gap: 1rem;
-}
-
 .title {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2rem, 2.5vw, 3.5rem);
   font-weight: 400;
   line-height: 0.95;
   color: var(--color-text-base);
-}
-
-.children {
-  font-family: "Jost", sans-serif;
-  font-size: 1rem;
-  line-height: 1.7;
-  max-width: 62ch;
 }
 
 @media (max-width: 768px) {

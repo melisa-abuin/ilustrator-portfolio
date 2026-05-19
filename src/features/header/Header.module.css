@@ -1,3 +1,12 @@
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .header {
   background-color: var(--color-primary);
   font-family: "Jost", sans-serif;
@@ -8,12 +17,41 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-  max-width: var(--container-max-width);
-  margin: 0 auto;
+.languageButton {
+  background-color: transparent;
+  color: rgba(255, 255, 255);
+  border: none;
+  padding: 0;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.languageButton:active {
+  opacity: 0.85;
+}
+
+.languageButton:hover {
+  color: rgba(255, 255, 255);
+}
+
+.languageButtonActive {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.languageDivider {
+  color: rgba(255, 255, 255);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+.languageSwitcher {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 0.6rem;
 }
 
 .nav {
@@ -41,66 +79,21 @@
   text-underline-offset: 4px;
 }
 
-.languageButton {
-  background-color: transparent;
-  color: rgba(255, 255, 255);
-  border: none;
-  padding: 0;
-  font-size: 0.95rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: color 0.2s ease;
-}
-
-.languageSwitcher {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-
-.languageButtonActive {
-  text-decoration: underline;
-  text-underline-offset: 4px;
-}
-
-.languageButton:hover {
-  color: rgba(255, 255, 255);
-}
-
-.languageDivider {
-  color: rgba(255, 255, 255);
-  font-size: 0.95rem;
-  font-weight: 400;
-}
-
-.languageButton:active {
-  opacity: 0.85;
-}
-
 @media (max-width: 768px) {
+  .container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
   .header {
     padding: 0.75rem 1rem;
   }
 
-  .container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .nav {
-    width: 100%;
-    justify-content: center;
-    order: 3;
-    gap: 1rem;
-  }
-
-  .navLink {
+  .languageButton {
     font-size: 0.875rem;
   }
 
-  .languageButton {
+  .languageDivider {
     font-size: 0.875rem;
   }
 
@@ -108,7 +101,13 @@
     gap: 0.4rem;
   }
 
-  .languageDivider {
+  .nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .navLink {
     font-size: 0.875rem;
   }
 }

@@ -9,18 +9,6 @@
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
 }
 
-.image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  transform: scale(1);
-  transform-origin: center;
-  transition: transform 350ms ease;
-}
-
 .card::after {
   content: "";
   position: absolute;
@@ -31,6 +19,22 @@
     var(--color-overlay-strong) 100%
   );
   z-index: 2;
+}
+
+.card:hover .image {
+  transform: scale(1.12);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  transform: scale(1);
+  transform-origin: center;
+  transition: transform 350ms ease;
 }
 
 .overlayText {
@@ -45,10 +49,6 @@
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.05em;
-}
-
-.card:hover .image {
-  transform: scale(1.12);
 }
 
 @media (max-width: 768px) {
