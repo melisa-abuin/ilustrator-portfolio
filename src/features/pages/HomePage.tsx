@@ -14,17 +14,17 @@ export const HomePage = () => {
       text: t("gallery.item1"),
     },
     {
-      publicId: "marca_zxpz35",
+      publicId: "eventi_c4jsl3",
       imageAlt: "Portrait concept artwork",
       text: t("gallery.item2"),
     },
     {
-      publicId: "stampe_obifx1",
+      publicId: "marca_zxpz35",
       imageAlt: "Colorful mixed media composition",
       text: t("gallery.item3"),
     },
     {
-      publicId: "eventi_c4jsl3",
+      publicId: "stampe_obifx1",
       imageAlt: "Storytelling scene illustration",
       text: t("gallery.item4"),
     },

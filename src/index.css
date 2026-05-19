@@ -12,6 +12,7 @@
   --color-text-base: rgb(51, 51, 51);
   --color-text-on-image: rgb(255, 255, 255);
   --color-overlay-strong: rgba(0, 0, 0, 0.56);
+  --container-max-width: 1400px;
 }
 
 * {
@@ -68,6 +69,11 @@ h6 {
 
 p {
   margin: 0;
+}
+
+ul,
+ol {
+  padding-inline-start: 1.5rem;
 }
 
 /* Accessibility */

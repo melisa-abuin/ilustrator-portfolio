@@ -1,5 +1,5 @@
 .gallery {
-  width: min(1200px, 92vw);
+  width: min(var(--container-max-width), 92vw);
   margin: 3rem auto 4rem;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
