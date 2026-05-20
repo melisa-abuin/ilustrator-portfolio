@@ -2,6 +2,7 @@ import { PageHero } from "../portfolio/PageHero"
 import { AboutSectionContent } from "../portfolio/AboutSectionContent"
 import { SplitTextSection } from "../portfolio/SplitTextSection"
 import { OverlayImageGallery } from "../portfolio/OverlayImageGallery"
+import { ContactCta } from "../portfolio/ContactCta"
 import { useTranslation } from "react-i18next"
 
 export const HomePage = () => {
@@ -65,6 +66,7 @@ export const HomePage = () => {
           ]}
         />
       </SplitTextSection>
+      <ContactCta />
     </>
   )
 }

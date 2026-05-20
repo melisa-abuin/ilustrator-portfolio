@@ -16,6 +16,7 @@ describe("SplitTextSection", () => {
       screen.getByRole("heading", { name: "Illustration" }),
     ).toBeInTheDocument()
     expect(screen.getByText("Custom content")).toBeInTheDocument()
+    expect(screen.getByRole("separator")).toBeInTheDocument()
   })
 
   it("does not render children container when children are missing", () => {
@@ -24,5 +25,6 @@ describe("SplitTextSection", () => {
     )
 
     expect(screen.queryByText("Custom content")).not.toBeInTheDocument()
+    expect(screen.queryByRole("separator")).not.toBeInTheDocument()
   })
 })

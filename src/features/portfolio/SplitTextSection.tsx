@@ -18,7 +18,12 @@ export const SplitTextSection = ({
         <p className={styles.sectionName}>{sectionName}</p>
         <div className={styles.body}>
           <h2 className={styles.title}>{title}</h2>
-          {children ? <div className={styles.children}>{children}</div> : null}
+          {children ? (
+            <>
+              <hr className={styles.separator} />
+              <div className={styles.children}>{children}</div>
+            </>
+          ) : null}
         </div>
       </div>
     </section>

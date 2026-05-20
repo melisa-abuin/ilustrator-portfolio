@@ -13,8 +13,8 @@ describe("HomePage", () => {
     expect(screen.getByText("Who am I")).toBeInTheDocument()
 
     expect(screen.getByText("Editorial")).toBeInTheDocument()
-    expect(screen.getByText("Festival events")).toBeInTheDocument()
+    expect(screen.getByText("Festival and events")).toBeInTheDocument()
     expect(screen.getByText("Brand illustration")).toBeInTheDocument()
-    expect(screen.getByText("Product prints")).toBeInTheDocument()
+    expect(screen.getByText("Product and prints")).toBeInTheDocument()
   })
 })

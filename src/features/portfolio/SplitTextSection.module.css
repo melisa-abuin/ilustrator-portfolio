@@ -33,6 +33,15 @@
   color: var(--color-primary);
 }
 
+.separator {
+  width: 3.5rem;
+  height: 0.3rem;
+  margin: 0;
+  border: 0;
+  border-radius: 30px;
+  background-color: var(--color-secondary);
+}
+
 .title {
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(2rem, 2.5vw, 3.5rem);
