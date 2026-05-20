@@ -15,5 +15,6 @@
 @media (max-width: 640px) {
   .gallery {
     grid-template-columns: 1fr;
+    margin: 3rem 16px 4rem 16px;
   }
 }

@@ -132,7 +132,7 @@
     width: min(100%, 700px);
     height: min(100vw, 700px);
     --frame-size: min(74vw, 520px);
-    --square-offset: 16px;
+    --square-offset: 28px;
   }
 
   .contentRow {
