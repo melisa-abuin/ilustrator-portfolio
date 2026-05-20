@@ -23,9 +23,21 @@ export const AboutSectionContent = ({
       <p>{t(bodyKey)}</p>
       {pointKeys.length > 0 ? (
         <ul>
-          {pointKeys.map((pointKey) => (
-            <li key={pointKey}>{t(pointKey)}</li>
-          ))}
+          {pointKeys.map((pointKey) => {
+            const href = t(`${pointKey}.href`, { defaultValue: "" })
+
+            return (
+              <li key={pointKey}>
+                {href ? (
+                  <a href={href} target="_blank" rel="noopener noreferrer">
+                    {t(pointKey)}
+                  </a>
+                ) : (
+                  t(pointKey)
+                )}
+              </li>
+            )
+          })}
         </ul>
       ) : null}
     </>

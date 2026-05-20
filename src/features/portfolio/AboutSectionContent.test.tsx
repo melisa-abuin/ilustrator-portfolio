@@ -32,6 +32,33 @@ describe("AboutSectionContent", () => {
       ),
     ).toBeInTheDocument()
     expect(screen.getByText("Editorial")).toBeInTheDocument()
-    expect(screen.getByText("Festival events")).toBeInTheDocument()
+    expect(screen.getByText("Festival and events")).toBeInTheDocument()
+  })
+
+  it("renders links when point href keys are provided", () => {
+    renderWithRouter(
+      <AboutSectionContent
+        bodyKey="home.extraSection2.body"
+        pointKeys={[
+          "home.extraSection2.point1",
+          "home.extraSection2.point2",
+          "home.extraSection2.point3",
+          "home.extraSection2.point4",
+        ]}
+      />,
+    )
+
+    expect(
+      screen.getByText("EMAIL: anabakas.art@gmail.com").closest("a"),
+    ).toHaveAttribute("href", "mailto:anabakas.art@gmail.com")
+    expect(
+      screen.getByText("BEHANCE: behance.net/anabakas").closest("a"),
+    ).toHaveAttribute("href", "https://www.behance.net/anabakas")
+    expect(
+      screen.getByText("INSTAGRAM: @illustrator_anabakas").closest("a"),
+    ).toHaveAttribute("href", "https://www.instagram.com/illustrator_anabakas")
+    expect(
+      screen.getByText("WhatsAPP: click here").closest("a"),
+    ).toHaveAttribute("href", "https://wa.me/393331234567")
   })
 })

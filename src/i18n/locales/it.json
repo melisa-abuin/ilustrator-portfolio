@@ -30,7 +30,11 @@
   "home.extraSection2.title": "Sono disponibile per collaborazioni su progetti editoriali, eventi, brand e illustrazione applicata.",
   "home.extraSection2.body": "",
   "home.extraSection2.point1": "EMAIL: anabakas.art@gmail.com",
+  "home.extraSection2.point1.href": "mailto:anabakas.art@gmail.com",
   "home.extraSection2.point2": "BEHANCE: behance.net/anabakas",
+  "home.extraSection2.point2.href": "https://www.behance.net/anabakas",
   "home.extraSection2.point3": "INSTAGRAM: @illustrator_anabakas",
-  "home.extraSection2.point4": "WhatsAPP: clicca qui"
+  "home.extraSection2.point3.href": "https://www.instagram.com/illustrator_anabakas",
+  "home.extraSection2.point4": "WhatsAPP: clicca qui",
+  "home.extraSection2.point4.href": "https://wa.me/393331234567"
 }
