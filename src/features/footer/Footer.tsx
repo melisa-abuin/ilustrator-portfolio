@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "./FooterIcons"
+import { BehanceIcon, InstagramIcon, WhatsAppIcon } from "./FooterIcons"
 import styles from "./Footer.module.css"
 
 export const Footer = () => {
@@ -7,19 +7,19 @@ export const Footer = () => {
 
   const socialLinks = [
     {
-      href: "https://wa.me/",
+      href: "https://wa.me/393383178245",
       label: "WhatsApp",
       icon: <WhatsAppIcon />,
     },
     {
-      href: "https://instagram.com",
+      href: "https://instagram.com/illustrator_anabakas",
       label: "Instagram",
       icon: <InstagramIcon />,
     },
     {
-      href: "https://facebook.com",
-      label: "Facebook",
-      icon: <FacebookIcon />,
+      href: "https://www.behance.net/anabakas",
+      label: "Behance",
+      icon: <BehanceIcon />,
     },
   ]
 

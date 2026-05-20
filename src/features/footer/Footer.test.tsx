@@ -15,9 +15,9 @@ describe("Footer", () => {
       "href",
       "https://instagram.com",
     )
-    expect(screen.getByLabelText("Facebook")).toHaveAttribute(
+    expect(screen.getByLabelText("Behance")).toHaveAttribute(
       "href",
-      "https://facebook.com",
+      "https://www.behance.net",
     )
 
     expect(

@@ -1,3 +1,9 @@
+.behanceIcon {
+  width: 2rem;
+  height: 2rem;
+  fill: currentColor;
+}
+
 .container {
   max-width: var(--container-max-width);
   margin: 0 auto;

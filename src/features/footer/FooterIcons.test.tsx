@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
-import { FacebookIcon, InstagramIcon, WhatsAppIcon } from "./FooterIcons"
+import { BehanceIcon, InstagramIcon, WhatsAppIcon } from "./FooterIcons"
 
 describe("FooterIcons", () => {
   it("renders WhatsApp icon", () => {
@@ -13,8 +13,8 @@ describe("FooterIcons", () => {
     expect(container.querySelector("svg")).toBeInTheDocument()
   })
 
-  it("renders Facebook icon", () => {
-    const { container } = render(<FacebookIcon />)
+  it("renders Behance icon", () => {
+    const { container } = render(<BehanceIcon />)
     expect(container.querySelector("svg")).toBeInTheDocument()
   })
 })
