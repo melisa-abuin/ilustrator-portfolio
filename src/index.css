@@ -7,6 +7,7 @@
 :root {
   --color-primary: rgb(30, 53, 38);
   --color-secondary: rgb(236, 112, 153);
+  --color-secondary-light: rgb(249, 221, 230);
   --color-tertiary: rgb(233, 170, 103);
   --color-surface-base: rgb(255, 255, 255);
   --color-surface-muted: rgb(239, 239, 239);
