@@ -5,7 +5,9 @@ import { AboutSectionContent } from "./AboutSectionContent"
 
 describe("AboutSectionContent", () => {
   it("renders translated body and list items", () => {
-    renderWithRouter(<AboutSectionContent />)
+    renderWithRouter(
+      <AboutSectionContent listLabelKey="aboutSection.listLabel" />,
+    )
 
     expect(
       screen.getByText(
@@ -13,6 +15,7 @@ describe("AboutSectionContent", () => {
       ),
     ).toBeInTheDocument()
 
+    expect(screen.getByText("What I do")).toBeInTheDocument()
     expect(screen.getByText("editorial")).toBeInTheDocument()
     expect(screen.getByText("for events and festivals")).toBeInTheDocument()
     expect(screen.getByText("for brands and campaigns")).toBeInTheDocument()

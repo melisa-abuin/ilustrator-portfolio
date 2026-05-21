@@ -1,7 +1,9 @@
 import { useTranslation } from "react-i18next"
+import styles from "./AboutSectionContent.module.css"
 
 interface AboutSectionContentProps {
   bodyKey?: string
+  listLabelKey?: string
   pointKeys?: string[]
 }
 
@@ -14,6 +16,7 @@ const DEFAULT_POINT_KEYS = [
 
 export const AboutSectionContent = ({
   bodyKey = DEFAULT_BODY_KEY,
+  listLabelKey,
   pointKeys = DEFAULT_POINT_KEYS,
 }: AboutSectionContentProps) => {
   const { t } = useTranslation()
@@ -22,23 +25,33 @@ export const AboutSectionContent = ({
     <>
       <p>{t(bodyKey)}</p>
       {pointKeys.length > 0 ? (
-        <ul>
-          {pointKeys.map((pointKey) => {
-            const href = t(`${pointKey}.href`, { defaultValue: "" })
+        <div className={listLabelKey ? styles.listRow : undefined}>
+          {listLabelKey ? (
+            <p className={styles.listLabel}>{t(listLabelKey)}</p>
+          ) : null}
+          <ul className={styles.list}>
+            {pointKeys.map((pointKey) => {
+              const href = t(`${pointKey}.href`, { defaultValue: "" })
 
-            return (
-              <li key={pointKey}>
-                {href ? (
-                  <a href={href} target="_blank" rel="noopener noreferrer">
-                    {t(pointKey)}
-                  </a>
-                ) : (
-                  t(pointKey)
-                )}
-              </li>
-            )
-          })}
-        </ul>
+              return (
+                <li key={pointKey} className={styles.listItem}>
+                  {href ? (
+                    <a
+                      className={styles.link}
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {t(pointKey)}
+                    </a>
+                  ) : (
+                    t(pointKey)
+                  )}
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       ) : null}
     </>
   )

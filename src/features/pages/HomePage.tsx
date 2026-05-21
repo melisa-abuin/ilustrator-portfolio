@@ -43,7 +43,7 @@ export const HomePage = () => {
         sectionName={t("aboutSection.name")}
         title={t("aboutSection.title")}
       >
-        <AboutSectionContent />
+        <AboutSectionContent listLabelKey="aboutSection.listLabel" />
       </SplitTextSection>
       <OverlayImageGallery items={galleryItems} />
       <SplitTextSection

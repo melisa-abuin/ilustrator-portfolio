@@ -1,0 +1,48 @@
+.link {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.list {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.listItem {
+  list-style: none;
+  margin: 0;
+  padding: 0.75rem 0;
+}
+
+.listItem + .listItem {
+  border-top: 1px solid rgba(30, 53, 38, 0.16);
+}
+
+.listLabel {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  margin: 0;
+  padding-top: 0.75rem;
+  text-transform: uppercase;
+}
+
+.listRow {
+  align-items: start;
+  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(100px, 140px) minmax(0, 1fr);
+}
+
+@media (max-width: 768px) {
+  .listRow {
+    gap: 0.5rem;
+    grid-template-columns: 1fr;
+  }
+}

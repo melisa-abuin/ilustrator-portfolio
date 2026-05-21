@@ -20,8 +20,19 @@
 }
 
 .section {
+  position: relative;
   width: 100%;
   padding: 4rem 0;
+}
+
+.section + .section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(var(--container-max-width), 92vw);
+  border-top: 1px solid rgba(30, 53, 38, 0.16);
+  transform: translateX(-50%);
 }
 
 .sectionName {
