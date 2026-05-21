@@ -3,7 +3,7 @@
   border-radius: 999px;
   color: var(--color-primary);
   display: inline-flex;
-  font-family: "Jost", sans-serif;
+  font-family: var(--font-all-caps);
   font-size: 0.95rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -45,7 +45,7 @@
 
 .marqueeText {
   color: var(--color-primary);
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-title);
   font-size: clamp(2.8rem, 12vw, 7.8rem);
   letter-spacing: 0.05em;
   text-transform: capitalize;
@@ -61,7 +61,7 @@
 }
 
 .section {
-  background-color: var(--color-secondary-light);
+  background-color: var(--color-tertiary);
   padding: 2.5rem 0;
 }
 

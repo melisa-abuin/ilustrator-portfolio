@@ -99,6 +99,7 @@
 
 .subtitle {
   color: var(--color-primary);
+  font-family: var(--font-all-caps);
   font-size: clamp(1rem, 1.4vw, 1.25rem);
   font-weight: 400;
   line-height: 1.5;
@@ -114,12 +115,13 @@
   align-items: flex-start;
   justify-content: center;
   padding: 3rem;
-  font-family: "Cormorant Garamond", serif;
+  font-family: var(--font-body);
   flex-direction: column;
 }
 
 .title {
   color: var(--color-primary);
+  font-family: var(--font-title);
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 400;
   line-height: 1.2;
