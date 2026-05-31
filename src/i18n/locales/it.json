@@ -6,9 +6,12 @@
   "header.aboutMe": "Chi Sono",
   "footer.copyright": "©2026 Portfolio di illustrazioni. | Anastasia Bakastikova",
   "footer.about": "Chi Siamo",
+  "footer.behance": "Behance",
   "footer.contact": "Contatti",
   "footer.instagram": "Instagram",
+  "footer.socialLinksLabel": "Link social",
   "footer.twitter": "Twitter",
+  "footer.whatsapp": "WhatsApp",
   "portfolio.title": "Portfolio di Illustrazioni",
   "portfolio.subtitle": "Anastasia Bakastikova",
   "portfolio.viewWorks": "Visualizza i Miei Lavori",
@@ -42,5 +45,6 @@
   "home.contactCta.button": "Contattami",
   "cases.sectionLabel": "Sezione progetti",
   "cases.title": "Editoriale",
-  "cases.subtitle": "Illustrazioni e copertine realizzate per inTrieste Magazine durante una collaborazione durata oltre due anni, tra copertine editoriali e illustrazioni per articoli di approfondimento."
+  "cases.subtitle": "Illustrazioni e copertine realizzate per inTrieste Magazine durante una collaborazione durata oltre due anni, tra copertine editoriali e illustrazioni per articoli di approfondimento.",
+  "a11y.skipToMain": "Vai al contenuto principale"
 }

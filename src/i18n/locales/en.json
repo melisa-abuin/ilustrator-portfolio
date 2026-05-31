@@ -6,9 +6,12 @@
   "header.aboutMe": "About Me",
   "footer.copyright": "©2026 Illustrator Portfolio. | Anastasia Bakastikova",
   "footer.about": "About",
+  "footer.behance": "Behance",
   "footer.contact": "Contact",
   "footer.instagram": "Instagram",
+  "footer.socialLinksLabel": "Social links",
   "footer.twitter": "Twitter",
+  "footer.whatsapp": "WhatsApp",
   "portfolio.title": "Illustrations Portfolio",
   "portfolio.subtitle": "Anastasia Bakastikova",
   "portfolio.viewWorks": "View My Works",
@@ -42,5 +45,6 @@
   "home.contactCta.button": "Contact me",
   "cases.sectionLabel": "Projects section",
   "cases.title": "Editorial",
-  "cases.subtitle": "Illustrations and covers created for inTrieste Magazine during a collaboration that lasted more than two years, across editorial covers and illustrations for in-depth articles."
+  "cases.subtitle": "Illustrations and covers created for inTrieste Magazine during a collaboration that lasted more than two years, across editorial covers and illustrations for in-depth articles.",
+  "a11y.skipToMain": "Skip to main content"
 }

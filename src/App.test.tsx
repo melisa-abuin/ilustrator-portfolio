@@ -17,6 +17,9 @@ describe("App", () => {
 
     expect(screen.getByRole("link", { name: "Home" })).toBeInTheDocument()
     expect(
+      screen.getByRole("link", { name: "Skip to main content" }),
+    ).toHaveAttribute("href", "#main-content")
+    expect(
       screen.getByRole("heading", { name: "Illustrations Portfolio" }),
     ).toBeInTheDocument()
     expect(

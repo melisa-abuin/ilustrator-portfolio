@@ -9,7 +9,7 @@ describe("Footer", () => {
 
     expect(screen.getByLabelText("WhatsApp")).toHaveAttribute(
       "href",
-      "https://wa.me/",
+      "https://wa.me/393383178245",
     )
     expect(screen.getByLabelText("Instagram")).toHaveAttribute(
       "href",

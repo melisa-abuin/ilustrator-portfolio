@@ -8,17 +8,17 @@ export const Footer = () => {
   const socialLinks = [
     {
       href: "https://wa.me/393383178245",
-      label: "WhatsApp",
+      label: t("footer.whatsapp"),
       icon: <WhatsAppIcon />,
     },
     {
       href: "https://instagram.com/illustrator_anabakas",
-      label: "Instagram",
+      label: t("footer.instagram"),
       icon: <InstagramIcon />,
     },
     {
       href: "https://www.behance.net/anabakas",
-      label: "Behance",
+      label: t("footer.behance"),
       icon: <BehanceIcon />,
     },
   ]
@@ -30,20 +30,24 @@ export const Footer = () => {
           <div className={styles.copyright}>
             <p>{t("footer.copyright")}</p>
           </div>
-          <div className={styles.socialLinks}>
+          <ul
+            className={styles.socialLinks}
+            aria-label={t("footer.socialLinksLabel")}
+          >
             {socialLinks.map((item) => (
-              <a
-                key={item.label}
-                href={item.href}
-                className={styles.socialLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={item.label}
-              >
-                {item.icon}
-              </a>
+              <li key={item.label} className={styles.socialItem}>
+                <a
+                  href={item.href}
+                  className={styles.socialLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                >
+                  {item.icon}
+                </a>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </div>
     </footer>

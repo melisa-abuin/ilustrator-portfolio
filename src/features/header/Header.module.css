@@ -42,6 +42,11 @@
   color: rgba(255, 255, 255);
 }
 
+.languageButton:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 .languageButtonActive {
   text-decoration: underline;
   text-underline-offset: 4px;
@@ -77,6 +82,11 @@
 
 .navLink:hover {
   color: rgba(255, 255, 255);
+}
+
+.navLink:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
 }
 
 .navLinkActive {
