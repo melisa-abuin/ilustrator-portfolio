@@ -2,12 +2,12 @@ import { CloudinaryImage } from "../home/CloudinaryImage"
 import styles from "./CasesImageGridSection.module.css"
 
 const imageTiles = [
-  { publicId: "editorial_crdbvi", variant: "tileWide" },
-  { publicId: "eventi_c4jsl3", variant: "tileNarrow" },
-  { publicId: "marca_zxpz35", variant: "tileMedium" },
-  { publicId: "stampe_obifx1", variant: "tileWide" },
-  { publicId: "editorial_crdbvi", variant: "tileMedium" },
-  { publicId: "eventi_c4jsl3", variant: "tileNarrow" },
+  { publicId: "gallery_1_wdijqn", variant: "tileWide" },
+  { publicId: "gallery_2_q5l8oq", variant: "tileNarrow" },
+  { publicId: "gallery_3_xnkwi0", variant: "tileNarrow" },
+  { publicId: "gallery_4_v4psvg", variant: "tileWide" },
+  { publicId: "gallery_5_gcqvga", variant: "tileWide" },
+  { publicId: "gallery_6_wfaez7", variant: "tileNarrow" },
 ] as const
 
 export const CasesImageGridSection = () => {
