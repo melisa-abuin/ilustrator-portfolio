@@ -12,6 +12,7 @@ const DEFAULT_POINT_KEYS = [
   "aboutSection.point1",
   "aboutSection.point2",
   "aboutSection.point3",
+  "aboutSection.point4",
 ]
 
 export const AboutSectionContent = ({
