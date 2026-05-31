@@ -26,7 +26,7 @@
 }
 
 .listLabel {
-  color: var(--color-primary);
+  color: var(--color-text-base);
   font-family: var(--font-all-caps);
   font-size: 2rem;
   font-weight: 300;
