@@ -68,7 +68,7 @@
 .navLink {
   color: rgba(255, 255, 255);
   text-decoration: none;
-  font-family: var(--font-all-caps);
+  font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 400;
   text-transform: uppercase;
