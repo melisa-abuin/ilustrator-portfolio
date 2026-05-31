@@ -1,8 +1,8 @@
-import { PageHero } from "../portfolio/PageHero"
-import { AboutSectionContent } from "../portfolio/AboutSectionContent"
-import { SplitTextSection } from "../portfolio/SplitTextSection"
-import { OverlayImageGallery } from "../portfolio/OverlayImageGallery"
-import { ContactCta } from "../portfolio/ContactCta"
+import { PageHero } from "../home/PageHero"
+import { AboutSectionContent } from "../home/AboutSectionContent"
+import { SplitTextSection } from "../home/SplitTextSection"
+import { OverlayImageGallery } from "../home/OverlayImageGallery"
+import { ContactCta } from "../home/ContactCta"
 import { useTranslation } from "react-i18next"
 
 export const HomePage = () => {

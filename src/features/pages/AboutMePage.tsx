@@ -1,4 +1,4 @@
-import { SplitTextSection } from "../portfolio/SplitTextSection"
+import { SplitTextSection } from "../home/SplitTextSection"
 
 export const AboutMePage = () => {
   return (

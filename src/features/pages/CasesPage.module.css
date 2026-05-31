@@ -1,49 +1,3 @@
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  justify-content: center;
-  max-width: 36rem;
-}
-
-.imageGrid {
-  align-content: center;
-  display: grid;
-  gap: 0.75rem;
-  grid-auto-flow: dense;
-  grid-auto-rows: 156px;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
-.overlapCardBottom {
-  border-radius: 12px;
-  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.18);
-  height: 205px;
-  left: 152px;
-  position: absolute;
-  top: 130px;
-  width: 205px;
-  z-index: 1;
-}
-
-.overlapCardTop {
-  border-radius: 12px;
-  box-shadow: 0 18px 28px rgba(0, 0, 0, 0.24);
-  height: 205px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 205px;
-  z-index: 2;
-}
-
-.overlapStack {
-  height: 205px;
-  margin-top: 6rem;
-  position: relative;
-  width: 205px;
-}
-
 .section {
   align-items: center;
   display: grid;
@@ -52,87 +6,14 @@
   margin: 0 auto;
   max-width: var(--container-max-width);
   min-height: calc(100dvh - 88px);
-  padding: 3rem 2rem;
+  padding: 3rem 0;
   width: 100%;
-}
-
-.subtitle {
-  color: var(--color-text-base);
-  font-family: var(--font-body);
-  font-size: 1.125rem;
-  line-height: 1.7;
-}
-
-.tile {
-  background-color: var(--color-surface-base);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.tileImage {
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
-}
-
-.tileMedium {
-  grid-column: span 3;
-}
-
-.tileNarrow {
-  grid-column: span 2;
-}
-
-.tileWide {
-  grid-column: span 4;
-}
-
-.title {
-  color: var(--color-primary);
-  font-family: var(--font-title);
-  font-size: clamp(2.2rem, 4vw, 3.8rem);
-  line-height: 1.1;
 }
 
 @media (max-width: 900px) {
-  .imageGrid {
-    grid-auto-rows: 132px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .overlapCardBottom {
-    height: 205px;
-    left: 82px;
-    top: 92px;
-    width: 205px;
-  }
-
-  .overlapCardTop {
-    height: 205px;
-    width: 205px;
-  }
-
-  .overlapStack {
-    height: 312px;
-    width: 292px;
-  }
-
   .section {
     grid-template-columns: 1fr;
     min-height: calc(100dvh - 72px);
     padding: 2rem 1rem;
-  }
-
-  .tileMedium {
-    grid-column: span 2;
-  }
-
-  .tileNarrow {
-    grid-column: span 2;
-  }
-
-  .tileWide {
-    grid-column: span 4;
   }
 }

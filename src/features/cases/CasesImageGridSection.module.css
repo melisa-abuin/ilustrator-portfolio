@@ -1,0 +1,52 @@
+.imageGrid {
+  align-content: center;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: dense;
+  grid-auto-rows: 156px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.tile {
+  background-color: var(--color-surface-base);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tileImage {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.tileMedium {
+  grid-column: span 3;
+}
+
+.tileNarrow {
+  grid-column: span 2;
+}
+
+.tileWide {
+  grid-column: span 4;
+}
+
+@media (max-width: 900px) {
+  .imageGrid {
+    grid-auto-rows: 132px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .tileMedium {
+    grid-column: span 2;
+  }
+
+  .tileNarrow {
+    grid-column: span 2;
+  }
+
+  .tileWide {
+    grid-column: span 4;
+  }
+}

@@ -25,6 +25,8 @@
 
 - This repository follows a feature-based architecture.
 - When adding new components, place them under the relevant feature folder in `src/features/` rather than in generic shared-by-default locations.
+- For page-scoped feature folders, name the folder after the page role: for example, use `home` for `HomePage`, `cases` for `CasesPage`, and `about` for `AboutMePage`.
+- Avoid generic names like `portfolio` for page-specific folders when a page-aligned name exists.
 
 ## Copy And Translations
 
