@@ -13,11 +13,11 @@ describe("Footer", () => {
     )
     expect(screen.getByLabelText("Instagram")).toHaveAttribute(
       "href",
-      "https://instagram.com",
+      "https://instagram.com/illustrator_anabakas",
     )
     expect(screen.getByLabelText("Behance")).toHaveAttribute(
       "href",
-      "https://www.behance.net",
+      "https://www.behance.net/anabakas",
     )
 
     expect(
