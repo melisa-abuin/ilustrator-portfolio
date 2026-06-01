@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next"
-import { CloudinaryImage } from "../home/CloudinaryImage"
+import { CloudinaryImage } from "../shared/CloudinaryImage"
 import styles from "./CasesIntroSection.module.css"
 
 export const CasesIntroSection = () => {

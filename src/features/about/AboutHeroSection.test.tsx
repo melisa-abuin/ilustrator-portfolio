@@ -1,11 +1,11 @@
 import { screen } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
 import { renderWithRouter } from "../../test/test-utils"
-import { AboutMePage } from "./AboutMePage"
+import { AboutHeroSection } from "./AboutHeroSection"
 
-describe("AboutMePage", () => {
+describe("AboutHeroSection", () => {
   it("renders translated title and image placeholder area", () => {
-    renderWithRouter(<AboutMePage />)
+    renderWithRouter(<AboutHeroSection />)
 
     expect(
       screen.getByRole("heading", { name: "Who I am" }),

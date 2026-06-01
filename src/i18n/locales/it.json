@@ -46,5 +46,17 @@
   "cases.sectionLabel": "Sezione progetti",
   "cases.title": "Editoriale",
   "cases.subtitle": "Illustrazioni e copertine realizzate per inTrieste Magazine durante una collaborazione durata oltre due anni, tra copertine editoriali e illustrazioni per articoli di approfondimento.",
+  "aboutPage.title": "Chi sono",
+  "aboutPage.imagePlaceholderLabel": "Area immagine",
+  "aboutPage.imageAlt": "Fotografia di Anastasia Bakastikova",
+  "aboutPage.section1.title": "Sono Anastasia, illustratrice con base a Udine. Lavoro con riviste, agenzie ed eventi in Friuli Venezia Giulia — creando illustrazioni che catturano il momento, con calore e colore.",
+  "aboutPage.section1.body": "Credo che un buon progetto nasca dalla fiducia reciproca: ascolto, rispetto degli accordi e la sensazione di lavorare davvero nella stessa direzione.",
+  "aboutPage.section2.name": "Servizio",
+  "aboutPage.section2.title": "Cosa posso fare per te?",
+  "aboutPage.section2.body": "Esplora i servizi e scopri come possiamo lavorare insieme.",
+  "aboutPage.section2.point1": "Editoriale",
+  "aboutPage.section2.point2": "Eventi e festival",
+  "aboutPage.section2.point3": "Illustrazione di brand",
+  "aboutPage.section2.point4": "Stampe e prodotti",
   "a11y.skipToMain": "Vai al contenuto principale"
 }

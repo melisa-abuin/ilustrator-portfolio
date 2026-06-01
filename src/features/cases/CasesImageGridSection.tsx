@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "../home/CloudinaryImage"
+import { CloudinaryImage } from "../shared/CloudinaryImage"
 import styles from "./CasesImageGridSection.module.css"
 
 const imageTiles = [

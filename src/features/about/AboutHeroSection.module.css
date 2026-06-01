@@ -1,0 +1,142 @@
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.imageArea {
+  background-color: var(--color-tertiary);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 60vh;
+}
+
+.imageSlot {
+  aspect-ratio: 1 / 1;
+  max-width: 90%;
+  overflow: hidden;
+  position: relative;
+  width: min(80vw, 800px);
+}
+
+.section {
+  width: 100%;
+}
+
+.squareBL {
+  background: transparent;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  box-shadow: 0 0 0 600px var(--color-tertiary);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.squareBLClip {
+  bottom: 0;
+  height: 50%;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  width: 30%;
+  z-index: 1;
+}
+
+.squareBR {
+  background: transparent;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: 0 0 0 600px var(--color-tertiary);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.squareBRClip {
+  bottom: 0;
+  height: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  width: 30%;
+  z-index: 1;
+}
+
+.squareTL {
+  background: transparent;
+  border-bottom-left-radius: 50%;
+  border-top-left-radius: 50%;
+  box-shadow: 0 0 0 600px var(--color-tertiary);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.squareTLClip {
+  height: 50%;
+  left: 0;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+}
+
+.squareTR {
+  background: transparent;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: 0 0 0 600px var(--color-tertiary);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.squareTRClip {
+  height: 50%;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+}
+
+.title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.titleWrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  min-height: 15vh;
+  padding: 1.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .imageArea {
+    min-height: 44vh;
+  }
+
+  .section {
+    grid-template-rows: minmax(38vh, auto) minmax(44vh, auto);
+  }
+
+  .titleWrap {
+    min-height: 38vh;
+  }
+}

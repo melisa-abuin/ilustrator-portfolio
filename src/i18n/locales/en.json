@@ -46,5 +46,17 @@
   "cases.sectionLabel": "Projects section",
   "cases.title": "Editorial",
   "cases.subtitle": "Illustrations and covers created for inTrieste Magazine during a collaboration that lasted more than two years, across editorial covers and illustrations for in-depth articles.",
+  "aboutPage.title": "Who I am",
+  "aboutPage.imagePlaceholderLabel": "Image area",
+  "aboutPage.imageAlt": "Photo of Anastasia Bakastikova",
+  "aboutPage.section1.name": "My work",
+  "aboutPage.section1.title": "I'm Anastasia, an illustrator based in Udine. I work with magazines, agencies and events in Friuli Venezia Giulia — creating illustrations that capture the moment, with warmth and colour.",
+  "aboutPage.section1.point1": "Editorial illustration",
+  "aboutPage.section1.point2": "Illustration for events and festivals",
+  "aboutPage.section1.point3": "Illustration for brands and campaigns",
+  "aboutPage.section1.point4": "Prints and products",
+  "aboutPage.section2.name": "Approach",
+  "aboutPage.section2.title": "Illustrating with intention.",
+  "aboutPage.section2.body": "I create images that balance narrative, texture, and colour. Every project begins with a close observation of the world — the light, the rhythm, the detail that tells the whole story.",
   "a11y.skipToMain": "Skip to main content"
 }

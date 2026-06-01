@@ -1,8 +1,8 @@
 import { PageHero } from "../home/PageHero"
-import { AboutSectionContent } from "../home/AboutSectionContent"
-import { SplitTextSection } from "../home/SplitTextSection"
+import { AboutSectionContent } from "../shared/AboutSectionContent"
+import { SplitTextSection } from "../shared/SplitTextSection"
 import { OverlayImageGallery } from "../home/OverlayImageGallery"
-import { ContactCta } from "../home/ContactCta"
+import { ContactCta } from "../shared/ContactCta"
 import { useTranslation } from "react-i18next"
 
 export const HomePage = () => {

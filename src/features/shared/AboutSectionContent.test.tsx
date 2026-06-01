@@ -31,7 +31,7 @@ describe("AboutSectionContent", () => {
 
     expect(
       screen.getByText(
-        "I draw inspiration from the Italy that is lived every day — the morning light, the scent of coffee, a sky changing color in the late afternoon. In my work, I aim to capture the moment: that fraction of a second when a scene still has warmth, movement, life. I live and work in Friuli-Venezia Giulia, a region that has taught me that beauty doesn't need to be loud.",
+        "In my work, I aim to capture the moment: that fraction of a second when a scene still has warmth, movement, life. I live and work in Friuli-Venezia Giulia, a region that has taught me that beauty doesn't need to be loud.",
       ),
     ).toBeInTheDocument()
     expect(screen.getByText("Editorial")).toBeInTheDocument()

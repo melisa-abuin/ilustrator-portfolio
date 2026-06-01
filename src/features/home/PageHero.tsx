@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "./CloudinaryImage"
+import { CloudinaryImage } from "../shared/CloudinaryImage"
 import styles from "./PageHero.module.css"
 
 interface PageHeroProps {
