@@ -1,0 +1,19 @@
+.editorial {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: minmax(280px, 1fr) minmax(320px, 1fr);
+  margin: 0 auto;
+  max-width: var(--container-max-width);
+  min-height: calc(100dvh - 88px);
+  padding: 3rem 0;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .editorial {
+    grid-template-columns: 1fr;
+    min-height: calc(100dvh - 72px);
+    padding: 2rem 1rem;
+  }
+}

@@ -1,0 +1,43 @@
+.brandGallery {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-rows: 1fr 0.7fr;
+  min-height: 0;
+}
+
+.brandImage {
+  background-color: var(--color-surface-base);
+  border-radius: 12px;
+  display: block;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  width: 100%;
+}
+
+.brandLeftColumn {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-rows: 1fr 1fr;
+  min-height: 0;
+}
+
+.brandRow1 {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+}
+
+.brandRow2 {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  min-height: 0;
+}
+
+@media (max-width: 900px) {
+  .brandGallery {
+    min-height: 600px;
+  }
+}
