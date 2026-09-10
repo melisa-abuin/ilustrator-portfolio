@@ -1,0 +1,30 @@
+.printsCarousels {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.printsImage {
+  background-color: var(--color-surface-base);
+  border-radius: 12px;
+  display: block;
+  height: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.printsRow {
+  align-items: center;
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 900px) {
+  .printsRow {
+    min-height: 0;
+  }
+}

@@ -1,6 +1,10 @@
 import { CloudinaryImage } from "../shared/CloudinaryImage"
 import styles from "./CasesImageGridSection.module.css"
 
+interface CasesImageGridSectionProps {
+  testId?: string
+}
+
 const imageTiles = [
   { publicId: "gallery_1_wdijqn", variant: "tileWide" },
   { publicId: "gallery_2_q5l8oq", variant: "tileNarrow" },
@@ -10,13 +14,11 @@ const imageTiles = [
   { publicId: "gallery_6_wfaez7", variant: "tileNarrow" },
 ] as const
 
-export const CasesImageGridSection = () => {
+export const CasesImageGridSection = ({
+  testId = "cases-image-grid",
+}: CasesImageGridSectionProps) => {
   return (
-    <div
-      className={styles.imageGrid}
-      aria-hidden="true"
-      data-testid="cases-image-grid"
-    >
+    <div className={styles.imageGrid} aria-hidden="true" data-testid={testId}>
       {imageTiles.map((tile, index) => (
         <div
           key={`${tile.publicId}-${index}`}
