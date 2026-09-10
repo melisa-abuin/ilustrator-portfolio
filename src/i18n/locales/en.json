@@ -54,6 +54,8 @@
   "cases.conceptual.subtitle": "",
   "cases.prints.title": "Prints and products",
   "cases.prints.subtitle": "",
+  "cases.prints.previous": "Scroll prints carousel left",
+  "cases.prints.next": "Scroll prints carousel right",
   "aboutPage.title": "Who I am",
   "aboutPage.imagePlaceholderLabel": "Image area",
   "aboutPage.imageAlt": "Photo of Anastasia Bakastikova",
