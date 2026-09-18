@@ -19,7 +19,7 @@ export const Header = ({ onLanguageChange }: HeaderProps) => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <nav className={styles.nav} aria-label="Main navigation">
+        <nav className={styles.nav} aria-label={t("header.mainNavigation")}>
           <NavLink
             className={({ isActive }) =>
               isActive
@@ -55,16 +55,16 @@ export const Header = ({ onLanguageChange }: HeaderProps) => {
         <div
           className={styles.languageSwitcher}
           role="group"
-          aria-label="Select language"
+          aria-label={t("header.languageSwitcher")}
         >
           <button
             className={`${styles.languageButton} ${activeLanguage.startsWith("it") ? styles.languageButtonActive : ""}`}
             onClick={() => handleLanguageChange("it")}
-            aria-label="Switch to Italian"
+            aria-label={t("header.switchToItalian")}
             aria-pressed={activeLanguage.startsWith("it")}
             type="button"
           >
-            IT
+            {t("header.languageIt")}
           </button>
           <span className={styles.languageDivider} aria-hidden="true">
             |
@@ -72,11 +72,11 @@ export const Header = ({ onLanguageChange }: HeaderProps) => {
           <button
             className={`${styles.languageButton} ${activeLanguage.startsWith("en") ? styles.languageButtonActive : ""}`}
             onClick={() => handleLanguageChange("en")}
-            aria-label="Switch to English"
+            aria-label={t("header.switchToEnglish")}
             aria-pressed={activeLanguage.startsWith("en")}
             type="button"
           >
-            EN
+            {t("header.languageEn")}
           </button>
         </div>
       </div>

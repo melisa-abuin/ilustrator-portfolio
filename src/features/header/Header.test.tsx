@@ -1,8 +1,8 @@
 import { screen, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { describe, expect, it, vi } from "vitest"
-import { Header } from "./Header"
 import { renderWithRouter } from "../../test/test-utils"
+import { Header } from "./Header"
 
 describe("Header", () => {
   it("renders navigation links and marks active route", () => {
@@ -30,7 +30,7 @@ describe("Header", () => {
 
     expect(onLanguageChange).toHaveBeenCalledWith("it")
     expect(
-      screen.getByRole("button", { name: "Switch to Italian" }),
+      screen.getByRole("button", { name: "Passa all'italiano" }),
     ).toHaveAttribute("aria-pressed", "true")
   })
 })
