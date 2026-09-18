@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "../shared/CloudinaryImage"
+import { ImageRow } from "../shared/ImageRow"
 import styles from "./CasesImageGridSection.module.css"
 
 interface CasesImageGridSectionProps {
@@ -18,19 +18,15 @@ export const CasesImageGridSection = ({
   testId = "cases-image-grid",
 }: CasesImageGridSectionProps) => {
   return (
-    <div className={styles.imageGrid} aria-hidden="true" data-testid={testId}>
-      {imageTiles.map((tile, index) => (
-        <div
-          key={`${tile.publicId}-${index}`}
-          className={`${styles.tile} ${styles[tile.variant]}`}
-        >
-          <CloudinaryImage
-            publicId={tile.publicId}
-            alt=""
-            className={styles.tileImage}
-          />
-        </div>
-      ))}
-    </div>
+    <ImageRow
+      ariaHidden
+      className={styles.imageGrid}
+      imageClassName={styles.tileImage}
+      items={imageTiles.map((tile) => ({
+        publicId: tile.publicId,
+        itemClassName: `${styles.tile} ${styles[tile.variant]}`,
+      }))}
+      testId={testId}
+    />
   )
 }

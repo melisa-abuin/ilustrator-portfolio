@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "../shared/CloudinaryImage"
+import { ImageRow } from "../shared/ImageRow"
 import styles from "./CasesEventCarouselsSection.module.css"
 
 const carouselRows = [
@@ -20,16 +20,11 @@ export const CasesEventCarouselsSection = () => {
           data-testid={`cases-event-carousel-${rowIndex + 1}`}
           key={rowIndex}
         >
-          <div className={styles.carouselTrack}>
-            {row.map((publicId) => (
-              <CloudinaryImage
-                alt=""
-                className={styles.carouselImage}
-                key={publicId}
-                publicId={publicId}
-              />
-            ))}
-          </div>
+          <ImageRow
+            className={styles.carouselTrack}
+            imageClassName={styles.carouselImage}
+            items={row.map((publicId) => ({ publicId }))}
+          />
         </div>
       ))}
     </div>

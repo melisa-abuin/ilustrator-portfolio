@@ -1,4 +1,4 @@
-import { CloudinaryImage } from "../shared/CloudinaryImage"
+import { ImageRow } from "../shared/ImageRow"
 import { CasesIntroSection } from "./CasesIntroSection"
 import { CasesPrintsCarousel } from "./CasesPrintsCarousel"
 import printsStyles from "./CasesPrintsSection.module.css"
@@ -31,16 +31,12 @@ export const CasesPrintsSection = () => {
         subtitleKey="cases.prints.subtitle"
         titleKey="cases.prints.title"
       />
-      <div className={printsStyles.printsRow} data-testid="cases-prints-images">
-        {printsImages.map((publicId) => (
-          <CloudinaryImage
-            alt=""
-            className={printsStyles.printsImage}
-            key={publicId}
-            publicId={publicId}
-          />
-        ))}
-      </div>
+      <ImageRow
+        className={printsStyles.printsRow}
+        imageClassName={printsStyles.printsImage}
+        items={printsImages.map((publicId) => ({ publicId }))}
+        testId="cases-prints-images"
+      />
       <div
         className={printsStyles.printsCarousels}
         data-testid="cases-prints-carousels"

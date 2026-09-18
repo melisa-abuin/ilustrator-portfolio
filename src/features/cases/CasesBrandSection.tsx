@@ -1,4 +1,5 @@
 import { CloudinaryImage } from "../shared/CloudinaryImage"
+import { ImageRow } from "../shared/ImageRow"
 import brandStyles from "./CasesBrandSection.module.css"
 import { CasesIntroSection } from "./CasesIntroSection"
 import styles from "./CasesSection.module.css"
@@ -24,27 +25,19 @@ export const CasesBrandSection = () => {
         className={brandStyles.brandGallery}
         data-testid="cases-brand-gallery"
       >
-        <div className={brandStyles.brandRow1}>
-          {brandTopImages.map((publicId) => (
-            <CloudinaryImage
-              alt=""
-              className={brandStyles.brandImage}
-              key={publicId}
-              publicId={publicId}
-            />
-          ))}
-        </div>
+        <ImageRow
+          className={brandStyles.brandRow1}
+          imageClassName={brandStyles.brandImage}
+          items={brandTopImages.map((publicId) => ({ publicId }))}
+        />
         <div className={brandStyles.brandRow2}>
-          <div className={brandStyles.brandLeftColumn}>
-            {brandBottomImages.slice(0, 2).map((publicId) => (
-              <CloudinaryImage
-                alt=""
-                className={brandStyles.brandImage}
-                key={publicId}
-                publicId={publicId}
-              />
-            ))}
-          </div>
+          <ImageRow
+            className={brandStyles.brandLeftColumn}
+            imageClassName={brandStyles.brandImage}
+            items={brandBottomImages.slice(0, 2).map((publicId) => ({
+              publicId,
+            }))}
+          />
           <CloudinaryImage
             alt=""
             className={brandStyles.brandImage}
