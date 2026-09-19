@@ -135,8 +135,4 @@
   .section {
     grid-template-rows: minmax(38vh, auto) minmax(44vh, auto);
   }
-
-  .titleWrap {
-    min-height: 38vh;
-  }
 }

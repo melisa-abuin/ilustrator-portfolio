@@ -1,0 +1,92 @@
+.carousel {
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.carouselImage {
+  background-color: var(--color-surface-base);
+  border-radius: 12px;
+  flex: 0 0 auto;
+  height: 300px;
+  object-fit: contain;
+  width: auto;
+}
+
+.carouselRow1 .carouselImage {
+  height: 300px;
+}
+
+.carouselRow2 .carouselImage {
+  height: 300px;
+}
+
+.carouselRow3 .carouselImage {
+  height: 200px;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  min-width: 100%;
+  width: max-content;
+}
+
+.eventCarousels {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .eventCarousels {
+    gap: 1rem;
+  }
+
+  .carousel {
+    overflow-x: visible;
+  }
+
+  .carouselTrack {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .carouselImage {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .carouselRow1 .carouselImage,
+  .carouselRow2 .carouselImage,
+  .carouselRow3 .carouselImage {
+    height: 200px;
+  }
+
+  .carouselRow1 .carouselTrack {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselRow1 .carouselImage:nth-child(n + 2) {
+    display: none;
+  }
+
+  .carouselRow2 .carouselTrack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carouselRow2 .carouselImage:nth-child(n + 3) {
+    display: none;
+  }
+
+  .carouselRow3 .carouselTrack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

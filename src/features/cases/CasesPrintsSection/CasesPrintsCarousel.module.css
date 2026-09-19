@@ -1,0 +1,106 @@
+.button {
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  color: var(--color-primary);
+  cursor: pointer;
+  display: flex;
+  flex: 0 0 auto;
+  height: 40px;
+  justify-content: center;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+  width: 40px;
+}
+
+.button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-surface-base);
+}
+
+.buttonPrevious .icon {
+  transform: rotate(180deg);
+}
+
+.carousel {
+  align-items: center;
+  display: flex;
+  gap: 0.75rem;
+  height: 450px;
+  width: 100%;
+}
+
+.icon {
+  height: 18px;
+  width: 18px;
+}
+
+.image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.imageCenter {
+  height: 400px;
+}
+
+.imageEdge {
+  height: 300px;
+}
+
+.imageSide {
+  height: 350px;
+}
+
+.imageWrapper {
+  background-color: var(--color-surface-base);
+  border-radius: 12px;
+  flex: 1 1 0;
+  min-width: 0;
+  overflow: hidden;
+  transition: transform 0.35s ease;
+}
+
+.track {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  gap: 0.75rem;
+  min-width: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 900px) {
+  .carousel {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
+  }
+
+  .track {
+    flex: 1 1 100%;
+    gap: 0;
+    order: -1;
+  }
+
+  .imageCenter {
+    height: 320px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .imageSide {
+    height: 260px;
+    margin: 0 -24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .imageEdge {
+    display: none;
+  }
+}

@@ -34,6 +34,20 @@
   width: max-content;
 }
 
+.wideImages {
+  width: 100%;
+}
+
+.wideImages .overlapCardBottom {
+  aspect-ratio: 3 / 2;
+  margin-left: 35%;
+  width: 65%;
+}
+
+.wideImages .overlapCardTop {
+  width: 65%;
+}
+
 .subtitle {
   color: var(--color-text-base);
   font-family: var(--font-body);
@@ -57,13 +71,7 @@
 }
 
 @media (max-width: 900px) {
-  .overlapCardBottom {
-    margin-left: 86px;
-    margin-top: -43px;
-    width: 180px;
-  }
-
-  .overlapCardTop {
-    width: 208px;
+  .overlapStack {
+    display: none;
   }
 }
