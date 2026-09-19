@@ -1,6 +1,6 @@
 import { CasesEventCarouselsSection } from "./CasesEventCarouselsSection"
-import { CasesIntroSection } from "./CasesIntroSection"
-import styles from "./CasesSection.module.css"
+import { CasesIntroSection } from "../CasesIntroSection"
+import styles from "../CasesSection.module.css"
 
 export const CasesEventsSection = () => {
   return (

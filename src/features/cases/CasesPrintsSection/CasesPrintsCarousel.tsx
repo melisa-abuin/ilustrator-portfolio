@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useTranslation } from "react-i18next"
-import { CloudinaryImage } from "../shared/CloudinaryImage"
+import { CloudinaryImage } from "../../shared/CloudinaryImage"
 import styles from "./CasesPrintsCarousel.module.css"
 
 interface CasesPrintsCarouselProps {

@@ -1,8 +1,8 @@
-import { ImageRow } from "../shared/ImageRow"
-import { CasesIntroSection } from "./CasesIntroSection"
+import { ImageRow } from "../../shared/ImageRow"
+import { CasesIntroSection } from "../CasesIntroSection"
 import { CasesPrintsCarousel } from "./CasesPrintsCarousel"
 import printsStyles from "./CasesPrintsSection.module.css"
-import styles from "./CasesSection.module.css"
+import styles from "../CasesSection.module.css"
 
 const printsImages = ["Udine_1_yt2whe", "Trieste_1_hn46vc"] as const
 

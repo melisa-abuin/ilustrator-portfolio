@@ -1,6 +1,6 @@
 import styles from "./CasesEditorialSection.module.css"
 import { CasesImageGridSection } from "./CasesImageGridSection"
-import { CasesIntroSection } from "./CasesIntroSection"
+import { CasesIntroSection } from "../CasesIntroSection"
 
 export const CasesEditorialSection = () => {
   return (

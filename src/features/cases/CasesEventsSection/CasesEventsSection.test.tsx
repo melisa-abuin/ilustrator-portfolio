@@ -1,6 +1,6 @@
 import { screen } from "@testing-library/react"
 import { describe, expect, it } from "vitest"
-import { renderWithRouter } from "../../test/test-utils"
+import { renderWithRouter } from "../../../test/test-utils"
 import { CasesEventsSection } from "./CasesEventsSection"
 
 describe("CasesEventsSection", () => {

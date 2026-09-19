@@ -1,7 +1,7 @@
 import { screen, waitFor } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 import { describe, expect, it } from "vitest"
-import { renderWithRouter } from "../../test/test-utils"
+import { renderWithRouter } from "../../../test/test-utils"
 import { CasesPrintsCarousel } from "./CasesPrintsCarousel"
 
 const images = ["one_1_abc123", "two_1_def456", "three_1_ghi789"] as const

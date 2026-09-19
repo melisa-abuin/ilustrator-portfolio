@@ -1,9 +1,9 @@
 import { useTranslation } from "react-i18next"
-import { CasesBrandSection } from "../cases/CasesBrandSection"
-import { CasesConceptualSection } from "../cases/CasesConceptualSection"
-import { CasesEditorialSection } from "../cases/CasesEditorialSection"
-import { CasesEventsSection } from "../cases/CasesEventsSection"
-import { CasesPrintsSection } from "../cases/CasesPrintsSection"
+import { CasesBrandSection } from "../cases/CasesBrandSection/CasesBrandSection"
+import { CasesConceptualSection } from "../cases/CasesConceptualSection/CasesConceptualSection"
+import { CasesEditorialSection } from "../cases/CasesEditorialSection/CasesEditorialSection"
+import { CasesEventsSection } from "../cases/CasesEventsSection/CasesEventsSection"
+import { CasesPrintsSection } from "../cases/CasesPrintsSection/CasesPrintsSection"
 import styles from "./CasesPage.module.css"
 
 export const CasesPage = () => {

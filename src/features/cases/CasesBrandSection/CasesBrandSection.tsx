@@ -1,8 +1,8 @@
-import { CloudinaryImage } from "../shared/CloudinaryImage"
-import { ImageRow } from "../shared/ImageRow"
+import { CloudinaryImage } from "../../shared/CloudinaryImage"
+import { ImageRow } from "../../shared/ImageRow"
 import brandStyles from "./CasesBrandSection.module.css"
-import { CasesIntroSection } from "./CasesIntroSection"
-import styles from "./CasesSection.module.css"
+import { CasesIntroSection } from "../CasesIntroSection"
+import styles from "../CasesSection.module.css"
 
 const brandTopImages = ["1-1_1_ujnnlm", "1-2_1_dymybt"] as const
 const brandBottomImages = [

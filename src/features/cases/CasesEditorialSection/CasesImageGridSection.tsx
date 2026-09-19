@@ -1,4 +1,4 @@
-import { ImageRow } from "../shared/ImageRow"
+import { ImageRow } from "../../shared/ImageRow"
 import styles from "./CasesImageGridSection.module.css"
 
 interface CasesImageGridSectionProps {
