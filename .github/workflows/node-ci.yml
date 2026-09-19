@@ -18,6 +18,9 @@ jobs:
           node-version: 22.x
           cache: yarn
 
+      - name: Create .env file
+        run: cp .env.ci .env
+
       - run: yarn install
       - run: yarn build
       - run: yarn lint
