@@ -43,11 +43,15 @@
 
 @media (max-width: 900px) {
   .conceptualGallery {
-    min-height: 600px;
+    min-height: 0;
   }
 
   .conceptualRow3 {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    display: none;
+  }
+
+  .conceptualImage {
+    height: 200px;
+    max-height: none;
   }
 }

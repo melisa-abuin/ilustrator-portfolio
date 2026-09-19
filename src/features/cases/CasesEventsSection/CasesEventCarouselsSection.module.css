@@ -42,3 +42,51 @@
   gap: 2rem;
   min-width: 0;
 }
+
+@media (max-width: 900px) {
+  .eventCarousels {
+    gap: 1rem;
+  }
+
+  .carousel {
+    overflow-x: visible;
+  }
+
+  .carouselTrack {
+    display: grid;
+    gap: 0.75rem;
+    min-width: 0;
+    width: 100%;
+  }
+
+  .carouselImage {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .carouselRow1 .carouselImage,
+  .carouselRow2 .carouselImage,
+  .carouselRow3 .carouselImage {
+    height: 200px;
+  }
+
+  .carouselRow1 .carouselTrack {
+    grid-template-columns: 1fr;
+  }
+
+  .carouselRow1 .carouselImage:nth-child(n + 2) {
+    display: none;
+  }
+
+  .carouselRow2 .carouselTrack {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .carouselRow2 .carouselImage:nth-child(n + 3) {
+    display: none;
+  }
+
+  .carouselRow3 .carouselTrack {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

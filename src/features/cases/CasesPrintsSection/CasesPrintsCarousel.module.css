@@ -75,15 +75,32 @@
 }
 
 @media (max-width: 900px) {
-  .imageCenter {
-    height: 320px;
+  .carousel {
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
   }
 
-  .imageEdge {
-    height: 250px;
+  .track {
+    flex: 1 1 100%;
+    gap: 0;
+    order: -1;
+  }
+
+  .imageCenter {
+    height: 320px;
+    position: relative;
+    z-index: 2;
   }
 
   .imageSide {
-    height: 290px;
+    height: 260px;
+    margin: 0 -24px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .imageEdge {
+    display: none;
   }
 }

@@ -26,6 +26,7 @@
   .section {
     gap: 1rem;
     grid-template-columns: 1fr;
+    min-height: 0;
     padding: 2rem 1rem;
   }
 
