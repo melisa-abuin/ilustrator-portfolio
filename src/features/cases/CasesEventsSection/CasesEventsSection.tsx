@@ -1,6 +1,6 @@
-import { CasesEventCarouselsSection } from "./CasesEventCarouselsSection"
 import { CasesIntroSection } from "../CasesIntroSection"
 import styles from "../CasesSection.module.css"
+import { CasesEventCarouselsSection } from "./CasesEventCarouselsSection"
 
 export const CasesEventsSection = () => {
   return (
@@ -8,12 +8,13 @@ export const CasesEventsSection = () => {
       className={`${styles.section} ${styles.events}`}
       data-testid="cases-events-section"
     >
-      <CasesIntroSection
-        padding="24px"
-        showImages={false}
-        subtitleKey="cases.events.subtitle"
-        titleKey="cases.events.title"
-      />
+      <div className={styles.introPadding}>
+        <CasesIntroSection
+          showImages={false}
+          subtitleKey="cases.events.subtitle"
+          titleKey="cases.events.title"
+        />
+      </div>
       <CasesEventCarouselsSection />
     </div>
   )

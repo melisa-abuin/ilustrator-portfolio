@@ -1,8 +1,8 @@
 import { ImageRow } from "../../shared/ImageRow"
 import { CasesIntroSection } from "../CasesIntroSection"
+import styles from "../CasesSection.module.css"
 import { CasesPrintsCarousel } from "./CasesPrintsCarousel"
 import printsStyles from "./CasesPrintsSection.module.css"
-import styles from "../CasesSection.module.css"
 
 const printsImages = ["Udine_1_yt2whe", "Trieste_1_hn46vc"] as const
 
@@ -25,12 +25,13 @@ const carouselImages2 = [
 export const CasesPrintsSection = () => {
   return (
     <div className={styles.section} data-testid="cases-prints-section">
-      <CasesIntroSection
-        padding="24px"
-        showImages={false}
-        subtitleKey="cases.prints.subtitle"
-        titleKey="cases.prints.title"
-      />
+      <div className={styles.introPadding}>
+        <CasesIntroSection
+          showImages={false}
+          subtitleKey="cases.prints.subtitle"
+          titleKey="cases.prints.title"
+        />
+      </div>
       <ImageRow
         className={printsStyles.printsRow}
         imageClassName={printsStyles.printsImage}

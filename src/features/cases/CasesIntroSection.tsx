@@ -5,7 +5,6 @@ import styles from "./CasesIntroSection.module.css"
 interface CasesIntroSectionProps {
   imageIds?: readonly string[]
   wideImages?: boolean
-  padding?: string
   showImages?: boolean
   subtitleKey?: string
   titleKey?: string
@@ -13,7 +12,6 @@ interface CasesIntroSectionProps {
 
 export const CasesIntroSection = ({
   imageIds = ["overlap_top_ppizme", "overlap_bottom_f4okj6"],
-  padding,
   showImages = true,
   subtitleKey = "cases.subtitle",
   titleKey = "cases.title",
@@ -22,7 +20,7 @@ export const CasesIntroSection = ({
   const { t } = useTranslation()
 
   return (
-    <div className={styles.content} style={padding ? { padding } : undefined}>
+    <div className={styles.content}>
       <h1 className={styles.title}>{t(titleKey)}</h1>
       <p className={styles.subtitle}>{t(subtitleKey)}</p>
       {showImages && (

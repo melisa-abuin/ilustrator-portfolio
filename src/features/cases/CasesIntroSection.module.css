@@ -71,13 +71,7 @@
 }
 
 @media (max-width: 900px) {
-  .overlapCardBottom {
-    margin-left: 86px;
-    margin-top: -43px;
-    width: 180px;
-  }
-
-  .overlapCardTop {
-    width: 208px;
+  .overlapStack {
+    display: none;
   }
 }
